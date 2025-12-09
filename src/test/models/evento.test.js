@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable indent */
 import {
-    describe, expect, it, jest,
+    describe, expect, it,
 } from '@jest/globals';
 import Evento from '../models/evento.js';
 
