@@ -1,0 +1,128 @@
+﻿livraria_api_test  | 
+livraria_api_test  | > api-js-local@1.0.0 test
+livraria_api_test  | > npm install && npm rebuild && npm run drop-test-db && export NODE_ENV=test && npm run prepare-test-db && npm run test:mocha && npm run test:jest
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  | up to date, audited 930 packages in 7s
+livraria_api_test  | 
+livraria_api_test  | 106 packages are looking for funding
+livraria_api_test  |   run `npm fund` for details
+livraria_api_test  | 
+livraria_api_test  | 29 vulnerabilities (4 low, 13 moderate, 10 high, 2 critical)
+livraria_api_test  | 
+livraria_api_test  | To address issues that do not require attention, run:
+livraria_api_test  |   npm audit fix
+livraria_api_test  | 
+livraria_api_test  | To address all issues, run:
+livraria_api_test  |   npm audit fix --force
+livraria_api_test  | 
+livraria_api_test  | Run `npm audit` for details.
+livraria_api_test  | rebuilt dependencies successfully
+livraria_api_test  | 
+livraria_api_test  | > api-js-local@1.0.0 drop-test-db
+livraria_api_test  | > rm -f ./src/test/livraria.sqlite
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  | > api-js-local@1.0.0 prepare-test-db
+livraria_api_test  | > sqlite3 ./src/test/livraria.sqlite < populate.sql
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  | > api-js-local@1.0.0 test:mocha
+livraria_api_test  | > mocha ./src/test/routes/*.test.js
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  |   Ô£ö Deve retornar uma lista de livros (44ms)
+livraria_api_test  |   GET em /autores
+livraria_api_test  |     Ô£ö Deve retornar uma lista de autores
+livraria_api_test  |     Ô£ö Deve retornar um autor
+livraria_api_test  |     Ô£ö N├úo deve retornar um autor com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   POST em /autores
+livraria_api_test  |     Ô£ö Deve criar um novo autor
+livraria_api_test  |     Ô£ö Deve retornar uma lista de livros vazia
+livraria_api_test  |     Ô£ö N├úo deve retornar uma lista de livros com autor inv├ílido
+livraria_api_test  |     Ô£ö N├úo deve criar um autor ao receber body vazio
+livraria_api_test  | 
+livraria_api_test  |   PUT em /autores
+livraria_api_test  |     Ô£ö Deve atualizar um autor
+livraria_api_test  |     Ô£ö N├úo deve atualizar um autor com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   DELETE em /autores
+livraria_api_test  |     Ô£ö Deve deletar um autor
+livraria_api_test  |     Ô£ö N├úo deve deletar um autor com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   GET em /editoras
+livraria_api_test  |     Ô£ö Deve retornar uma lista de editoras
+livraria_api_test  |     Ô£ö Deve retornar uma editora
+livraria_api_test  |     Ô£ö N├úo deve retornar uma editora com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   POST em /editoras
+livraria_api_test  |     Ô£ö Deve criar uma nova editora
+livraria_api_test  |     Ô£ö N├úo deve criar uma editora ao receber body vazio
+livraria_api_test  | 
+livraria_api_test  |   PUT em /editoras
+livraria_api_test  |     Ô£ö Deve atualizar uma editora
+livraria_api_test  |     Ô£ö N├úo deve atualizar uma editora com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   DELETE em /editoras
+livraria_api_test  |     Ô£ö Deve deletar uma editora
+livraria_api_test  |     Ô£ö N├úo deve deletar uma editora com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   GET em /eventos
+livraria_api_test  |     Ô£ö Deve retornar uma lista de eventos
+livraria_api_test  | 
+livraria_api_test  |   GET em /livros
+livraria_api_test  |     Ô£ö Deve retornar uma lista de livros
+livraria_api_test  |     Ô£ö Deve retornar um livro
+livraria_api_test  |     Ô£ö N├úo deve retornar um livro com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   POST em /livros
+livraria_api_test  |     Ô£ö Deve criar um novo livro
+livraria_api_test  |     Ô£ö N├úo deve criar um livro ao receber body vazio
+livraria_api_test  | 
+livraria_api_test  |   PUT em /livros
+livraria_api_test  |     Ô£ö Deve atualizar um livro
+livraria_api_test  |     Ô£ö N├úo deve atualizar um livro com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  |   DELETE em /livros
+livraria_api_test  |     Ô£ö Deve deletar um livro
+livraria_api_test  |     Ô£ö N├úo deve deletar um livro com id inv├ílido
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  |   31 passing (294ms)
+livraria_api_test  | 
+livraria_api_test  | 
+livraria_api_test  | > api-js-local@1.0.0 test:jest
+livraria_api_test  | > node --experimental-vm-modules node_modules/jest/bin/jest.js ./src/test/models/*.test.js --verbose
+livraria_api_test  | 
+livraria_api_test  | FAIL src/test/models/evento.test.js
+livraria_api_test  |   ÔùÅ Test suite failed to run
+livraria_api_test  | 
+livraria_api_test  |     Cannot find module '../models/evento.js' from 'src/test/models/evento.test.js'
+livraria_api_test  | 
+livraria_api_test  |       at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver.js:427:11)
+livraria_api_test  | 
+livraria_api_test  | (node:236) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+livraria_api_test  | (Use `node --trace-warnings ...` to show where the warning was created)
+livraria_api_test  | (node:234) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+livraria_api_test  | (Use `node --trace-warnings ...` to show where the warning was created)
+livraria_api_test  | PASS src/test/models/editora.test.js
+livraria_api_test  |   Testando o modelo Editora
+livraria_api_test  |     Ô£ô Deve instanciar uma nova editora (1 ms)
+livraria_api_test  |     Ô£ô Deve fazer uma chamada simulada ao BD (1 ms)
+livraria_api_test  |     Ôùï skipped Deve salvar editora no BD
+livraria_api_test  | 
+livraria_api_test  | (node:235) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+livraria_api_test  | (Use `node --trace-warnings ...` to show where the warning was created)
+livraria_api_test  | PASS src/test/models/autor.test.js
+livraria_api_test  |   Testando o modelo Autor
+livraria_api_test  |     Ô£ô Deve instanciar um novo autor (2 ms)
+livraria_api_test  |     Ô£ô Deve fazer uma chamada simulada ao BD (2 ms)
+livraria_api_test  |     Ôùï skipped Deve salvar autor no BD
+livraria_api_test  | 
+livraria_api_test  | Test Suites: 1 failed, 2 passed, 3 total
+livraria_api_test  | Tests:       2 skipped, 4 passed, 6 total
+livraria_api_test  | Snapshots:   0 total
+livraria_api_test  | Time:        3.616 s
+livraria_api_test  | Ran all test suites matching /.\/src\/test\/models\/autor.test.js|.\/src\/test\/models\/editora.test.js|.\/src\/test\/models\/evento.test.js/i.
