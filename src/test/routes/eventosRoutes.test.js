@@ -15,11 +15,12 @@ chai.use(chaiHttp);
 const { expect } = chai;
 
 after(async () => {
-  await db.destroy();
+    await db.destroy();
 });
 
-describe ('GET em /eventos', () => {
+describe('GET em /eventos', () => {
     it('Deve retornar uma lista de eventos', (done) => {
+        process.env.EVENTO_FLAG = 'true';
         chai.request(app)
             .get('/eventos')
             .set('Accept', 'application/json')
@@ -29,7 +30,17 @@ describe ('GET em /eventos', () => {
                 expect(res.body[0]).to.have.property('id');
                 expect(res.body[0]).to.have.property('nome');
                 expect(res.body[0]).to.have.property('descrição');
-                done(); 
+                done();
             });
     });
+    it('Deve retornar error 404', (done) => {
+        process.env.EVENTO_FLAG = 'false';
+        chai.request(app)
+            .get('/eventos')
+            .set('Accept', 'application/json')
+            .end((err, res) => {
+                expect(res.status).to.equal(404);
+                done();
+            });
+    })
 });
