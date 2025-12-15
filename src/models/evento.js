@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 /* eslint-disable indent */
-import db from '../db/config/db.js';
+import db from '../db/dbconfig.js';
 
 class Evento {
     constructor({

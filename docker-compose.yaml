@@ -8,6 +8,7 @@ services:
       - "3000:3000"
     volumes:
       - ./:/app:cached
+      - /app/node_modules
     depends_on:
       - db
   test:
@@ -19,6 +20,9 @@ services:
       - "4000:4000"
     volumes:
       - ./:/app:cached
+      - /app/node_modules
+    environment:
+      - CI=true
   db:
     image: postgres:16-alpine
     container_name: livraria_db
